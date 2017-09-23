@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, inDevelopmential-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ADEPR - KINAMBA Admin Area</title>
+  <link rel="stylesheet" href="../css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="navbar-expand-sm navbar-dark bg-primary p-0 sticky-top">
+  <div class="container">
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+      <a href="../dashboard.html" class="navbar-brand">ADEPR - KINAMBA</a>
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item px-2">
+          <a href="../dashboard.html" class="nav-link active"><i class="fa fa-tachometer"></i> Dashboard</a>
+        </li>
+        <li class="nav-item dropdown px-2">
+          <a href="../dashboard.html" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="fa fa-navicon"></i> Manage</a>
+          <div class="dropdown-menu">
+            <a href="people.html" class="dropdown-item">Registration</a>
+            <a href="../services/baptism.html" class="dropdown-item">Baptism</a>
+            <a href="../services/lDevelopmenteracy.html" class="dropdown-item">LDevelopmenteracy</a>
+            <a href="../services/suspensions.html" class="dropdown-item">Suspension</a>
+            <a href="../services/bridals.html" class="dropdown-item">Bridal</a>
+            <a href="../services/prayers.html" class="dropdown-item">Prayers</a>
+            <a href="../services/preaching.html" class="dropdown-item">Preaching</a>
+            <a href="../services/choirs.html" class="dropdown-item">Choirs</a>
+            <a href="../services/recommendations" class="dropdown-item">Recommendations</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown px-2">
+          <a href="../parameters/index.html" class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="fa fa-gear"></i>Parameters</a>
+          <div class="dropdown-menu">
+            <a href="../parameters/types.html" class="dropdown-item">Member Type</a>
+            <a href="../parameters/roles.html" class="dropdown-item">Member Role</a>
+            <a href="../parameters/services.html" class="dropdown-item">Services</a>
+            <a href="../parameters/commissions.html" class="dropdown-item">Commissions</a>
+            <a href="../parameters/choirs.html" class="dropdown-item">Choirs</a>
+            <a href="../parameters/education.html" class="dropdown-item">Education Levels</a>
+            <a href="../parameters/zones.html" class="dropdown-item">Zones</a>
+            <a href="../parameters/chapelles.html" class="dropdown-item">Chapelles</a>
+            <a href="../parameters/villages.html" class="dropdown-item">Villages</a>
+            <a href="../parameters/cells.html" class="dropdown-item">Cells</a>
+            <a href="../parameters/sectors.html" class="dropdown-item">Sectors</a>
+            <a href="../parameters/districts.html" class="dropdown-item">Districts</a>
+            <a href="../parameters/provinces.html" class="dropdown-item">Provinces</a>
+            <a href="../parameters/parishes.html" class="dropdown-item">Parishes</a>
+            <a href="../parameters/dioceses.html" class="dropdown-item">Dioceses</a>
+          </div>
+        </li>
+        <li class="nav-item px-2">
+          <a href="../users.html" class="nav-link"><i class="fa fa-users"></i> Users</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown mr-3">
+          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+            <i class="fa fa-user"></i> Welcome Brad
+          </a>
+          <div class="dropdown-menu">
+            <a href="../profile.html" class="dropdown-item">
+              <i class="fa fa-user-circle"></i> Profile
+            </a>
+            <a href="../settings.html" class="dropdown-item">
+              <i class="fa fa-gear"></i> Settings
+            </a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="../index.html" class="nav-link">
+            <i class="fa fa-user-times"></i> Logout
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header id="main-header" class="py-2 text-black" style="background-color: #e3f2fd">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h6>People</h6>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ACTIONS -->
+<section id="action" class="py-4 mb-4 bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <a href="#" class="btn btn-primary btn-block" data-toggle="modal" data-target="#addPeopleModal">
+          <i class="fa fa-plus"></i> Add People
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PEOPLE -->
+<section  id="posts">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="card">
+          <div class="card-header">
+            <h4>People</h4>
+          </div>
+          <div class="scrollx">
+            <table class="table table-striped table-hover table-sm table-bordered">
+              <thead class="thead-default">
+                <tr>
+                  <tr>
+                    <th>#</th>
+                    <th>Reg #</th>
+                    <th>Father Last</th>
+                    <th>Father First</th>
+                    <th>Mother Last</th>
+                    <th>Mother First</th>
+                    <th>DOB</th>
+                    <th>Province</th>
+                    <th>District</th>
+                    <th>Sector</th>
+                    <th>Phone 1</th>
+                    <th>Phone 2</th>
+                    <th>Sex</th>
+                    <th>Passport</th>
+                    <th>Education</th>
+                    <th>School</th>
+                    <th>MarDevelopmental Status</th>
+                    <th>Email</th>
+                    <th>Res. Province</th>
+                    <th>Res. District</th>
+                    <th>Res. Sector</th>
+                    <th>Res. Cell</th>
+                    <th>Res. Village</th>
+                    <th>House Owner</th>
+                    <th>Job</th>
+                    <th>Employer</th>
+                    <th>Job Location</th>
+                    <th>Baptism Date</th>
+                    <th>Parish</th>
+                    <th>Role</th>
+                    <th>Orig. Cell</th>
+                    <th>Orig. Parish</th>
+                    <th>Category</th>
+                    <th>Data True</th>
+                    <th>Service</th>
+                    <th>Commision</th>
+                    <th>Choir</th>
+                    <th>Created At</th>
+                    <th>Updated At</th>
+                    <th>User</th>
+                    <th>Notes</th>
+                    <th colspan="2">Ops</th>
+                  </tr>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td scope="row">1</td>
+                  <td>00001</td>
+                  <td>MUGABO</td>
+                  <td>Amon</td>
+                  <td>MUKESHIMANA</td>
+                  <td>Beatrice</td>
+                  <td>05-06-1977</td>
+                  <td>East</td>
+                  <td>Kirehe</td>
+                  <td>Zaza</td>
+                  <td>0788555777</td>
+                  <td>0722555777</td>
+                  <td>M</td>
+                  <td>11977800113348</td>
+                  <td>Graduate</td>
+                  <td>NUR</td>
+                  <td>Married</td>
+                  <td>amugabo@example.com</td>
+                  <td>KIGALI</td>
+                  <td>Gsabo</td>
+                  <td>Gisozi</td>
+                  <td>Gakinjiro</td>
+                  <td>Kinamba</td>
+                  <td>Y</td>
+                  <td>Engineer</td>
+                  <td>EUCL</td>
+                  <td>Kigali</td>
+                  <td>01-01-1978</td>
+                  <td>Kirehe</td>
+                  <td>Pastor</td>
+                  <td>Zaza</td>
+                  <td>Kirehe</td>
+                  <td>Christian</td>
+                  <td>Y</td>
+                  <td>Preach</td>
+                  <td>Development</td>
+                  <td>Rehoboth</td>
+                  <td>01-01-2017 09:10:00</td>
+                  <td>01-01-2017 09:10:00</td>
+                  <td>bhakizayesu</td>
+                  <td>First record</td>
+                  <td colspan="2"><a href="#">Edit</a>&nbsp;<a href="#">Delete</a></td>
+                  <!--
+                  <td><a href="details.html" class="btn btn-scondary">
+                    <i class="fa fa-angle-double-right"></i> Details
+                  </a></td>
+                -->
+                </tr>
+                <tr>
+                  <td scope="row">2</td>
+                  <td>00002</td>
+                  <td>MUGABO</td>
+                  <td>Amon</td>
+                  <td>MUKESHIMANA</td>
+                  <td>Beatrice</td>
+                  <td>05-06-1977</td>
+                  <td>East</td>
+                  <td>Kirehe</td>
+                  <td>Zaza</td>
+                  <td>0788555777</td>
+                  <td>0722555777</td>
+                  <td>M</td>
+                  <td>11977800113348</td>
+                  <td>Graduate</td>
+                  <td>NUR</td>
+                  <td>Married</td>
+                  <td>amugabo@example.com</td>
+                  <td>KIGALI</td>
+                  <td>Gsabo</td>
+                  <td>Gisozi</td>
+                  <td>Gakinjiro</td>
+                  <td>Kinamba</td>
+                  <td>Y</td>
+                  <td>Engineer</td>
+                  <td>EUCL</td>
+                  <td>Kigali</td>
+                  <td>01-01-1978</td>
+                  <td>Kirehe</td>
+                  <td>Pastor</td>
+                  <td>Zaza</td>
+                  <td>Kirehe</td>
+                  <td>Christian</td>
+                  <td>Y</td>
+                  <td>Preach</td>
+                  <td>Development</td>
+                  <td>Rehoboth</td>
+                  <td>01-01-2017 09:10:00</td>
+                  <td>01-01-2017 09:10:00</td>
+                  <td>bhakizayesu</td>
+                  <td>First record</td>
+                  <td colspan="2"><a href="#">Edit</a>&nbsp;<a href="#">Delete</a></td>
+                  <!--
+                  <td><a href="details.html" class="btn btn-scondary">
+                    <i class="fa fa-angle-double-right"></i> Details
+                  </a></td>
+                -->
+                </tr>
+                <tr>
+                  <td scope="row">3</td>
+                  <td>00003</td>
+                  <td>MUGABO</td>
+                  <td>Amon</td>
+                  <td>MUKESHIMANA</td>
+                  <td>Beatrice</td>
+                  <td>05-06-1977</td>
+                  <td>East</td>
+                  <td>Kirehe</td>
+                  <td>Zaza</td>
+                  <td>0788555777</td>
+                  <td>0722555777</td>
+                  <td>M</td>
+                  <td>11977800113348</td>
+                  <td>Graduate</td>
+                  <td>NUR</td>
+                  <td>Married</td>
+                  <td>amugabo@example.com</td>
+                  <td>KIGALI</td>
+                  <td>Gsabo</td>
+                  <td>Gisozi</td>
+                  <td>Gakinjiro</td>
+                  <td>Kinamba</td>
+                  <td>Y</td>
+                  <td>Engineer</td>
+                  <td>EUCL</td>
+                  <td>Kigali</td>
+                  <td>01-01-1978</td>
+                  <td>Kirehe</td>
+                  <td>Pastor</td>
+                  <td>Zaza</td>
+                  <td>Kirehe</td>
+                  <td>Christian</td>
+                  <td>Y</td>
+                  <td>Preach</td>
+                  <td>Development</td>
+                  <td>Rehoboth</td>
+                  <td>01-01-2017 09:10:00</td>
+                  <td>01-01-2017 09:10:00</td>
+                  <td>bhakizayesu</td>
+                  <td>First record</td>
+                  <td colspan="2"><a href="#">Edit</a>&nbsp;<a href="#">Delete</a></td>
+                  <!--
+                  <td><a href="details.html" class="btn btn-scondary">
+                    <i class="fa fa-angle-double-right"></i> Details
+                  </a></td>
+                -->
+                </tr>
+                <tr>
+                  <td scope="row">4</td>
+                  <td>00004</td>
+                  <td>MUGABO</td>
+                  <td>Amon</td>
+                  <td>MUKESHIMANA</td>
+                  <td>Beatrice</td>
+                  <td>05-06-1977</td>
+                  <td>East</td>
+                  <td>Kirehe</td>
+                  <td>Zaza</td>
+                  <td>0788555777</td>
+                  <td>0722555777</td>
+                  <td>M</td>
+                  <td>11977800113348</td>
+                  <td>Graduate</td>
+                  <td>NUR</td>
+                  <td>Married</td>
+                  <td>amugabo@example.com</td>
+                  <td>KIGALI</td>
+                  <td>Gsabo</td>
+                  <td>Gisozi</td>
+                  <td>Gakinjiro</td>
+                  <td>Kinamba</td>
+                  <td>Y</td>
+                  <td>Engineer</td>
+                  <td>EUCL</td>
+                  <td>Kigali</td>
+                  <td>01-01-1978</td>
+                  <td>Kirehe</td>
+                  <td>Pastor</td>
+                  <td>Zaza</td>
+                  <td>Kirehe</td>
+                  <td>Christian</td>
+                  <td>Y</td>
+                  <td>Preach</td>
+                  <td>Development</td>
+                  <td>Rehoboth</td>
+                  <td>01-01-2017 09:10:00</td>
+                  <td>01-01-2017 09:10:00</td>
+                  <td>bhakizayesu</td>
+                  <td>First record</td>
+                  <td colspan="2"><a href="#">Edit</a>&nbsp;<a href="#">Delete</a></td>
+                  <!--
+                  <td><a href="details.html" class="btn btn-scondary">
+                    <i class="fa fa-angle-double-right"></i> Details
+                  </a></td>
+                -->
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section id="main-footer" class="bg-dark text-whDevelopmente mt-5 p-5">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <p class="lead text-center">Copyright &copy; 2017 ADEPR - KINAMBA</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PEOPLE MODAL -->
+<div class="modal fade" id="addPeopleModal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-whDevelopmente">
+        <h5 class="modal-title">Add People</h5>
+        <button class="close" data-dismis="modal"><span>&times;</span></button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <form>
+            <div class="form-group">
+              <label for="fLName">Father's Lastname</label>
+              <input type="text" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="fFName">Father's Firstname</label>
+              <input type="text" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="mLName">Mother's Lastname</label>
+              <input type="text" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="mFName">Mother's Firstname</label>
+              <input type="text" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="dob">Date of Birth</label>
+              <input type="date" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="bProvince">Birth Province</label>
+              <select class="form-control">
+                <option value="1">Kigali</option>
+                <option value="2">East</option>
+                <option value="3">West</option>
+                <option value="4">South</option>
+                <option value="5">North</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="bDistrict">Birth District</label>
+              <select class="form-control">
+                <option value="1">Nyarugenge</option>
+                <option value="2">Gasabo</option>
+                <option value="3">Kicukiro</option>
+                <option value="4">Ngoma</option>
+                <option value="5">Muhanga</option>
+                <option value="6">Gicumbi</option>
+                <option value="7">Karongi</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="bSector">Birth Sector</label>
+              <select class="form-control">
+                <option value="1">Muhima</option>
+                <option value="2">Gatsata</option>
+                <option value="3">Remera</option>
+                <option value="4">Kanombe</option>
+                <option value="5">Kimisagara</option>
+                <option value="6">Rugerero</option>
+                <option value="7">Rubengera</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="tel1">Phone 1</label>
+              <input type="tel" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="tel2">Phone 2</label>
+              <input type="tel" class="form-control">
+            </div>
+            <div class="form-group">
+              Sex
+              <label>
+                <input type="radio" name="sex" id="male" autocomplete="off" checked> Male
+              </label>
+              <label>
+                <input type="radio" name="sex" id="female" autocomplete="off"> Female
+              </label>
+            </div>
+            <div class="form-group">
+              <label for="passport">ID/Passport</label>
+              <input type="text" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="education">Education</label>
+              <select class="form-control">
+                <option value="1">Primary</option>
+                <option value="2">Secondary</option>
+                <option value="3">Graduate</option>
+                <option value="4">Post-graduate</option>
+                <option value="5">Vocational</option>
+                <option value="6">None</option>
+              </select>
+            </div>
+            <div class="form-group">
+              Marital Status
+              <label>
+                <input type="radio" name="mStatus" id="married" autocomplete="off" checked> Married
+              </label>
+              <label>
+                <input type="radio" name="mStatus" id="single" autocomplete="off"> Single
+              </label>
+              <label>
+                <input type="radio" name="mStatus" id="divorced" autocomplete="off"> Divorced
+              </label>
+              <label>
+                <input type="radio" name="mStatus" id="window" autocomplete="off"> Widow
+              </label>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="rProvince">Resident Province</label>
+              <select class="form-control">
+                <option value="1">Kigali</option>
+                <option value="2">East</option>
+                <option value="3">West</option>
+                <option value="4">South</option>
+                <option value="5">North</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="rDistrict">Resident District</label>
+              <select class="form-control">
+                <option value="1">Nyarugenge</option>
+                <option value="2">Gasabo</option>
+                <option value="3">Kicukiro</option>
+                <option value="4">Ngoma</option>
+                <option value="5">Muhanga</option>
+                <option value="6">Gicumbi</option>
+                <option value="7">Karongi</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="rSector">Resident Sector</label>
+              <select class="form-control">
+                <option value="1">Muhima</option>
+                <option value="2">Gatsata</option>
+                <option value="3">Remera</option>
+                <option value="4">Kanombe</option>
+                <option value="5">Kimisagara</option>
+                <option value="6">Rugerero</option>
+                <option value="7">Rubengera</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="rCell">Resident Cell</label>
+              <select class="form-control">
+                <option value="1">Kadobogo</option>
+                <option value="2">Muhima 1</option>
+                <option value="3">Nyabugogo</option>
+                <option value="4">Kinamba</option>
+                <option value="5">Ruturusu</option>
+                <option value="6">Nengo</option>
+                <option value="7">Mbugangari</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="rVillage">Resident Village</label>
+              <select class="form-control">
+                <option value="1">Amahoro</option>
+                <option value="2">Kabeza</option>
+                <option value="3">Yawunde</option>
+                <option value="4">Umutekano</option>
+                <option value="5">Rukomo</option>
+                <option value="6">Nyabarongo</option>
+                <option value="7">Nzove</option>
+              </select>
+            </div>
+            <div class="form-group">
+              House Owner ?
+              <label>
+                <input type="radio" name="houseOwner" id="isHouseOwner" autocomplete="off" checked> Yes
+              </label>
+              <label>
+                <input type="radio" name="houseOwner" id="isNotHouseOwner" autocomplete="off"> No
+              </label>
+            </div>
+            <div class="form-group">
+              <label for="job">Job</label>
+              <input type="text" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="employer">Email</label>
+              <input type="text" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="location">Job location</label>
+              <input type="text" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="bDate">Baptism Date</label>
+              <input type="date" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="bParish">Baptism Parish</label>
+              <select class="form-control">
+                <option value="1">Amahoro</option>
+                <option value="2">Kabeza</option>
+                <option value="3">Yawunde</option>
+                <option value="4">Umutekano</option>
+                <option value="5">Rukomo</option>
+                <option value="6">Nyabarongo</option>
+                <option value="7">Nzove</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="role">Church Function</label>
+              <select class="form-control">
+                <option value="1">Representative</option>
+                <option value="2">Pastor</option>
+                <option value="3">Singer</option>
+                <option value="4">Preacher</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="oCell">Origin Cell</label>
+              <select class="form-control">
+                <option value="1">Kadobogo</option>
+                <option value="2">Muhima 1</option>
+                <option value="3">Nyabugogo</option>
+                <option value="4">Kinamba</option>
+                <option value="5">Ruturusu</option>
+                <option value="6">Nengo</option>
+                <option value="7">Mbugangari</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="oParish">Origin Parish</label>
+              <select class="form-control">
+                <option value="1">Amahoro</option>
+                <option value="2">Kabeza</option>
+                <option value="3">Yawunde</option>
+                <option value="4">Umutekano</option>
+                <option value="5">Rukomo</option>
+                <option value="6">Nyabarongo</option>
+                <option value="7">Nzove</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="category">Category</label>
+              <select class="form-control">
+                <option value="1">Men</option>
+                <option value="2">Women</option>
+                <option value="3">Youth</option>
+                <option value="4">Executive</option>
+                <option value="5">Singer</option>
+                <option value="6">Children</option>
+              </select>
+            </div>
+            <div class="form-group">
+              Data Above Confirmed ?
+              <label>
+                <input type="radio" name="dataConfirmed" id="isDataConfirmed" autocomplete="off" checked> Yes
+              </label>
+              <label>
+                <input type="radio" name="dataConfirmed" id="isDataNotConfirmed" autocomplete="off"> No
+              </label>
+            </div>
+            <div class="form-group">
+              <label for="service">Service</label>
+              <select class="form-control">
+                <option value="1">Preach</option>
+                <option value="2">Baptism</option>
+                <option value="3">Literacy</option>
+                <option value="4">Registration</option>
+                <option value="5">Suspension</option>
+                <option value="6">Repenting</option>
+                <option value="7">Bridal</option>
+                <option value="8">Marriage</option>
+                <option value="9">Prayers</option>
+                <option value="10">Burial</option>
+                <option value="11">Recommendations</option>
+                <option value="12">Choirs</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="commission">Commission</label>
+              <select class="form-control">
+                <option value="1">Reception</option>
+                <option value="2">Construction</option>
+                <option value="3">Holy Food</option>
+                <option value="4">Development</option>
+                <option value="5">Prayers</option>
+                <option value="6">Preaching</option>
+                <option value="7">Protocol</option>
+                <option value="8">ICT</option>
+                <option value="9">Welfare</option>
+                <option value="10">Followup</option>
+                <option value="11">Thanksgiving</option>
+                <option value="12">Hygiene</option>
+                <option value="13">Repenting</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="choir">Choir</label>
+              <select class="form-control">
+                <option value="1">Rehoboth</option>
+                <option value="2">Christ Choir</option>
+                <option value="3">Holy Singers</option>
+              </select>
+            </div>
+            <!--
+            <div class="form-group">
+              <label for="file">Image Upload</label>
+              <input type="file" class="form-control-file">
+              <small class="form-text text-muted">Max Size 3mb</small>
+            </div>
+          -->
+            <div class="form-group">
+              <label for="body">Notes</label>
+              <textarea name="Editor1" class="form-control"></textarea>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary">Close</button>
+        <button class="btn btn-primary">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- USER MODAL -->
+<div class="modal fade" id="addUserModal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header bg-warning text-whDevelopmente">
+        <h5 class="modal-title">Add User</h5>
+        <button class="close" data-dismis="modal"><span>&times;</span></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="confirm">Confirm Password</label>
+            <input type="password" class="form-control">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary">Close</button>
+        <button class="btn btn-warning">Save Changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/popper.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="https://cdn.ckEditor.com/4.7.2/standard/ckEditor.js"></script>
+<script>
+	CKEditOR.replace( 'Editor1' );
+</script>
+</body>
+</html>
