@@ -43,6 +43,13 @@ body {
   border-radius: 5px;
   font-size: 30px; }
 
+#people-table {
+  background-color: #fff; }
+
+#people-table th {
+  background-color: #b23850;
+  color: #000; }
+
 .scrollx {
   overflow-x: scroll; }
 
